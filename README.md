@@ -14,4 +14,4 @@ Then, run a specific example, run `run ExampleName`.
 
 ## Resources
 
-* https://gist.github.com/oscarcs/5955c00d4ddb9fb01f5a8aad75580a9c
+* `HelloWorldExample` is based off of https://gist.github.com/oscarcs/5955c00d4ddb9fb01f5a8aad75580a9c, a Scala example of https://www.lwjgl.org/guide
