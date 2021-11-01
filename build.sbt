@@ -7,9 +7,14 @@ lazy val lwjglOsDistinction = System.getProperty("os.name") match {
   case _ => throw new Exception("Unknown platform!")
 }
 
+lazy val libgdxVersion = "1.10.0"
+
 lazy val libgdx = project.in(file("libgdx"))
   .settings(
-    scalaVersion := "3.0.2"
+    scalaVersion := "3.0.2",
+    libraryDependencies += "com.badlogicgames.gdx" % "gdx" % libgdxVersion,
+    libraryDependencies += "com.badlogicgames.gdx" % "gdx-backend-lwjgl" % libgdxVersion,
+    libraryDependencies += "com.badlogicgames.gdx" % "gdx-platform" % libgdxVersion % "natives-desktop"
   )
 
 lazy val lwjgl = project.in(file("lwjgl"))
