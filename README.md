@@ -1,5 +1,5 @@
 # [libGDX](https://libgdx.com/) vs [LWJGL](https://www.lwjgl.org/)
-In short, [LWJGL](https://www.lwjgl.org/) is a "Lightweight Java Game Library" that is built off of [libGDX](https://libgdx.com/), which is a "cross-platform Java game development framework".
+In short, [libGDX](https://libgdx.com/) is a "cross-platform Java game development framework" that is built off of [LWJGL](https://www.lwjgl.org/), which is a "Lightweight Java Game Library".
 
 ## In this repository
 
