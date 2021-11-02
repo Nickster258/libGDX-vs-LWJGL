@@ -25,8 +25,8 @@ lazy val libgdx = project.in(file("libgdx"))
     downloadNativesJar := {
       lazy val libgdxPlatformLocation = s"libgdx/lib/$libgdxPlatformStub"
       try {
-        println("Lib directory does not exist, creating")
         java.nio.file.Files.createDirectory(Paths.get("libgdx/lib/"))
+        println("Lib directory does not exist, creating")
       } catch {
         case e: IOException => println("Lib directory exists, ignoring")
       }
