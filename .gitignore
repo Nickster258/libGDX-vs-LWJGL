@@ -18,6 +18,7 @@ project/target/
 libgdx/target
 lwjgl/target
 target/
+lib/
 
 # eclipse
 build/
