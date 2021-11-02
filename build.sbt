@@ -41,7 +41,7 @@ lazy val libgdx = project.in(file("libgdx"))
     scalaVersion := "3.0.2",
     libraryDependencies ++= Seq(
       "com.badlogicgames.gdx" % "gdx" % libgdxVersion,
-      "com.badlogicgames.gdx" % "gdx-backend-lwjgl" % libgdxVersion
+      "com.badlogicgames.gdx" % "gdx-backend-lwjgl3" % libgdxVersion
     )
   )
 

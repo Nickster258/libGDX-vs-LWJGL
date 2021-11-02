@@ -1,15 +1,13 @@
-import com.badlogic.gdx.backends.lwjgl.{LwjglApplication, LwjglApplicationConfiguration}
-import com.badlogic.gdx.ApplicationAdapter
-import com.badlogic.gdx.Gdx
+import com.badlogic.gdx.backends.lwjgl3.{Lwjgl3Application, Lwjgl3ApplicationConfiguration}
 import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
+import com.badlogic.gdx.{ApplicationAdapter, Gdx}
 
 object Animation extends App :
-  val config = new LwjglApplicationConfiguration
-  config.title = "Animation"
-  config.width = 640
-  config.height = 480
-  new LwjglApplication(new AnimationExample, config)
+  val config = new Lwjgl3ApplicationConfiguration
+  config.setTitle("Animation")
+  config.setWindowedMode(640, 480)
+  new Lwjgl3Application(new AnimationExample, config)
 
 class AnimationExample extends ApplicationAdapter :
   var shapeRenderer: ShapeRenderer = null

@@ -1,15 +1,13 @@
-import com.badlogic.gdx.ApplicationAdapter
-import com.badlogic.gdx.Gdx
-import com.badlogic.gdx.backends.lwjgl.{LwjglApplication, LwjglApplicationConfiguration}
+import com.badlogic.gdx.backends.lwjgl3.{Lwjgl3Application, Lwjgl3ApplicationConfiguration}
 import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
+import com.badlogic.gdx.{ApplicationAdapter, Gdx}
 
 object ShapeRender extends App :
-  val config = new LwjglApplicationConfiguration
-  config.title = "Shape Rendering"
-  config.width = 640
-  config.height = 480
-  new LwjglApplication(new ShapeRenderingExample, config)
+  val config = new Lwjgl3ApplicationConfiguration
+  config.setTitle("Shape Rendering")
+  config.setWindowedMode(640, 480)
+  new Lwjgl3Application(new ShapeRenderingExample, config)
 
 class ShapeRenderingExample extends ApplicationAdapter :
   var shapeRenderer: ShapeRenderer = null

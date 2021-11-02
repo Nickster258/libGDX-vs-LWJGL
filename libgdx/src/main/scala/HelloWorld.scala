@@ -1,14 +1,13 @@
-import com.badlogic.gdx.{ApplicationAdapter, Gdx}
-import com.badlogic.gdx.backends.lwjgl.{LwjglApplication, LwjglApplicationConfiguration}
+import com.badlogic.gdx.backends.lwjgl3.{Lwjgl3Application, Lwjgl3ApplicationConfiguration}
 import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.g2d.{BitmapFont, SpriteBatch}
+import com.badlogic.gdx.{ApplicationAdapter, Gdx}
 
 object HelloWorld extends App :
-  val config = new LwjglApplicationConfiguration
-  config.title = "Hello libGDX"
-  config.width = 640
-  config.height = 480
-  new LwjglApplication(new HelloWorldGame, config)
+  val config = new Lwjgl3ApplicationConfiguration
+  config.setTitle("Hello libGDX")
+  config.setWindowedMode(640, 480)
+  new Lwjgl3Application(new HelloWorldGame, config)
 
 class HelloWorldGame extends ApplicationAdapter :
   var batch: SpriteBatch = null
