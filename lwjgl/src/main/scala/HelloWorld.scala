@@ -6,11 +6,11 @@ import org.lwjgl.opengl.*
 import org.lwjgl.opengl.GL11.*
 import org.lwjgl.system.MemoryUtil.*
 
-object HelloWorldExample extends App :
-  new HelloWorld().run()
+object HelloWorld extends App :
+  new HelloWorldExample().run()
 
 
-class HelloWorld:
+class HelloWorldExample:
   private var window: Long = 0
 
   def run() =

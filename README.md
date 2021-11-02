@@ -15,3 +15,4 @@ Then, run a specific example, run `run ExampleName`.
 ## Resources
 
 * `HelloWorldExample` is based off of https://gist.github.com/oscarcs/5955c00d4ddb9fb01f5a8aad75580a9c, a Scala example of https://www.lwjgl.org/guide
+* LibGDX examples were adapted from https://happycoding.io/tutorials/libgdx/hello-world into Scala 3

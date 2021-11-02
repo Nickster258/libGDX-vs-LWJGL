@@ -3,11 +3,11 @@ import com.badlogic.gdx.backends.lwjgl.{LwjglApplication, LwjglApplicationConfig
 import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.g2d.{BitmapFont, SpriteBatch}
 
-object HelloWorldExample extends App :
+object HelloWorld extends App :
   val config = new LwjglApplicationConfiguration
   config.title = "Hello libGDX"
-  config.width = 480
-  config.height = 800
+  config.width = 640
+  config.height = 480
   new LwjglApplication(new HelloWorldGame, config)
 
 class HelloWorldGame extends ApplicationAdapter :
