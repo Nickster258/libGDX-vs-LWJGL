@@ -1,3 +1,5 @@
+import java.io.IOException
+import java.nio.file.Paths
 import scala.language.postfixOps
 import scala.sys.process._
 
@@ -22,6 +24,12 @@ lazy val libgdx = project.in(file("libgdx"))
   .settings(
     downloadNativesJar := {
       lazy val libgdxPlatformLocation = s"libgdx/lib/$libgdxPlatformStub"
+      try {
+        println("Lib directory does not exist, creating")
+        java.nio.file.Files.createDirectory(Paths.get("libgdx/lib/"))
+      } catch {
+        case e: IOException => println("Lib directory exists, ignoring")
+      }
       if(java.nio.file.Files.notExists(new File(libgdxPlatformLocation).toPath)) {
         println("Natives do not exist, downloading natives...")
         url(libgdxPlatformUrl) #> file(libgdxPlatformLocation) !
